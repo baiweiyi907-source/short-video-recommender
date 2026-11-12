@@ -1,73 +1,95 @@
 # Personalisation and User Control in Short-Video Recommendation Systems
-
+README prose word count: 758 words
 ## Project Overview
 
-This project is a short-video recommendation website developed for the Intelligent Interactive Systems Assignment 2 at the University of Birmingham. The project focuses on helping users understand why videos are recommended and giving them more control over the content they see.
+This project is a short-video recommendation website developed for the Intelligent Interactive Systems Assignment 2 at the University of Birmingham. It explores how recommendation explanations and user controls can make short-video recommendations more transparent and controllable.
 
-The website allows users to watch short videos, give feedback and change their interests. Users can also view information about their recommendations and see how their actions affect the interest scores. The aim is to make the recommendation process easier to understand and control.
+Users can watch sample videos, provide feedback and adjust category interests. The prototype shows how these actions affect interest scores and recommendation rankings.
 
 ## Project Features
 
-The website provides a short-video feed with videos from different categories, including Animals, Food, Nature and Sports. Users can watch videos and move through the feed.
+The prototype provides a short-video feed containing eight sample videos across eight categories: Animals, Food, Nature, Fun, Travel, Sports, Music and City.
 
-Users can select Like or Not Interested to give feedback on a video. This feedback changes the interest score for the video's category. For example, selecting Not Interested on an Animals video can reduce its interest score from 82 to 57.
+Users can select Like or Not Interested to provide feedback on a video. This changes the interest score associated with its category: Like increases the score by 15 points, while Not Interested decreases it by 25 points. Scores remain within a range of 0–100.
 
-The Why this video? section explains which category a video belongs to and shows its interest score. Users can also open My Preferences to view and change the scores for eight categories.
+The Why this video? section explains a recommendation by displaying the video's category, original sample interest score and current interest score. Users can also open My Preferences to view and manually adjust interest scores for all eight categories through labelled sliders.
 
-The website includes a preview of the updated recommendation order. Users can choose when to apply the new order rather than having the current feed change immediately. They can also undo their last feedback.
+The prototype provides a preview of updated recommendation rankings. Users choose when to apply the new feed order, rather than having the current feed change immediately. An Undo option can reverse the last feedback action.
 
-The website saves feedback and preferences in the browser when local storage is available. Users can reset manual changes or delete their saved recommendation data.
+Feedback and manual preferences are saved in the browser using localStorage. Users can reset manual adjustments separately or use Forget My Data to remove their saved recommendation information.
 
 ## Project Status
 
-The website is a working interactive prototype built with React and TypeScript. The video feed, feedback buttons, recommendation explanations, preference controls and browser storage have been implemented.
+The project is a working interactive prototype developed using React and TypeScript. Its core interface, feedback, explanation, preference-control, ranking-preview and browser-based data-management functions have been implemented.
 
-The recommendation system uses a rule-based simulation. Interest scores change according to user feedback and manual preferences. The website uses these scores to update the recommendation ranking. It does not use a trained machine learning model.
+The recommendation system is a rule-based simulation, not a trained machine-learning model. Predefined rules update category interest scores, and the resulting scores determine recommendation rankings. Manual preference settings take priority over feedback-based scores.
 
-The prototype does not require users to create an account or sign in.
+The prototype does not require an account or sign-in. User feedback and preferences are stored locally in the browser.
 
 ## Technologies Used
 
-The website was developed using React, TypeScript, HTML and CSS. Vite is used to run the project during development and build the website.
-
-The project also uses browser local storage to save user feedback and interest scores. The example videos are loaded from Wikimedia Commons.
-
-The main website interface is in `src/App.tsx`, while the recommendation rules are in `src/recommendation.ts`. The preference controls are in `src/PreferenceControl.tsx`.
+The prototype was developed using React and TypeScript, with Vite providing the development environment. Browser localStorage stores user feedback and preferences, while locally stored MP4 files provide the video content. Recommendation scoring and ranking are implemented using predefined rules rather than a trained machine-learning model.
 
 ## How to Run the Project
 
-Node.js and npm must be installed before running the website. Node.js is needed to run the development tools, while npm installs the packages used by the project.
+### Requirements
 
-Download the project files and open the project folder in Visual Studio Code. Open a terminal in the folder and enter the following command.
+* Node.js
+* npm (included with Node.js)
+
+### Installation and Setup
+
+Clone the public GitHub repository:
+
+```bash
+git clone https://github.com/baiweiyi907-source/short-video-recommender.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd short-video-recommender
+```
+
+Install the dependencies:
 
 ```bash
 npm install
 ```
 
-This command reads the `package.json` file and installs the packages needed for the project, including React, Vite and other dependencies.
-
-After the installation is complete, enter the following command.
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
-Vite will display a local address in the terminal, usually `http://localhost:5173/`. Open the address shown in a web browser to use the website.
+Vite will display a local address in the terminal, usually:
 
-An internet connection is needed to load the example videos from Wikimedia Commons.
+```text
+http://localhost:5173/
+```
+
+Open the displayed address in a web browser to access the prototype.
+
+All eight MP4 videos are included in `public/videos/`. No additional download or separate ZIP file is required.
 
 ## Development Record
 
-During development, I worked on the React and TypeScript code, checked errors and made changes to the website interface. I also tested the main interactions in the browser to see whether the website responded as expected.
+The table summarises the main development changes, why they were made and how the prototype was checked.
 
-One important part of the development was the feedback system. When a user selects Not Interested, the interest score for that video's category decreases. I checked this interaction using an Animals video, where the score changed from 82 to 57.
-
-I also worked on how the updated recommendations are displayed. The website shows the new ranking in a preview, but the current video order stays the same until the user chooses to apply the changes. This gives users more control over when their recommendations change.
-
-I also checked the preference controls, recommendation explanations and saved data features while developing the prototype.
+| Development Stage     | Changes and Reasons                                                                                                                 | Verification                                                                  |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Initial Interface     | Built the short-video feed and organised eight sample videos into eight categories to establish the main user interaction.          | Checked page rendering and video playback in the browser.                     |
+| Feedback and Ranking  | Implemented Like, Not Interested, interest-score updates, recommendation previews and Undo to make the effects of feedback visible. | Checked feedback actions, score changes and recommendation previews.          |
+| Preference Management | Added eight labelled preference sliders so users can directly control category interests.                                           | Checked manual score adjustments and their effect on recommendation rankings. |
+| Data Management       | Added browser localStorage and separate reset and deletion functions to support persistent preferences and user data control.       | Checked preference restoration, reset behaviour and data deletion.            |
+| Video Sources         | Replaced externally hosted videos with eight local MP4 files to reduce dependence on external video sources.                        | Checked playback of the local video files in the browser.                     |
+| Final Checks          | Reviewed the main prototype features and prepared the project files for submission through GitHub.                                  | Checked the main browser interactions and overall prototype behaviour.        |
 
 ## AI Assistance
 
-I used ChatGPT during the development of this project to help with React and TypeScript code, identify possible errors and improve parts of the interface. I also used AI assistance when organising the system architecture diagram and reviewing the project documentation.
+I used ChatGPT to assist with React and TypeScript development, troubleshooting and project documentation. For example, I used AI assistance to investigate browser video playback issues while moving from externally hosted videos to local MP4 files.
 
-I reviewed the suggested changes and tested the website in the browser. I checked whether the main features worked as intended, including video feedback, interest score updates and preference controls. The final prototype reflects the changes and checks made during development.
+I reviewed the suggested changes and made adjustments where necessary. I then checked the relevant behaviour in the browser, including local video playback and the prototype's main interactions. ChatGPT also helped me organise the system architecture diagram and storyboards. I reviewed the diagrams and written documentation to ensure they represented the implemented prototype accurately.
+
+AI assistance supported the development and documentation process; I reviewed the final implementation and its behaviour.
