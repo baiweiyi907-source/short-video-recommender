@@ -2,7 +2,7 @@
 README prose word count: 758 words
 ## Project Overview
 
-This project is a short-video recommendation website developed for the Intelligent Interactive Systems Assignment 2 at the University of Birmingham. It explores how recommendation explanations and user controls can make short-video recommendations more transparent and controllable.
+This project is a short-video recommendation website that explores how recommendation explanations and user controls can make short-video recommendations more transparent and controllable. It explores how recommendation explanations and user controls can make short-video recommendations more transparent and controllable.
 
 Users can watch sample videos, provide feedback and adjust category interests. The prototype shows how these actions affect interest scores and recommendation rankings.
 
@@ -35,7 +35,7 @@ The prototype was developed using React and TypeScript, with Vite providing the 
 ### Requirements
 
 * Node.js
-* npm (included with Node.js)
+* npm
 
 ### Installation and Setup
 
