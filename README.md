@@ -1,5 +1,5 @@
 # Personalisation and User Control in Short-Video Recommendation Systems
-README prose word count: 758 words
+README prose word count: 729 words
 ## Project Overview
 
 This project is a short-video recommendation website that explores how recommendation explanations and user controls can make short-video recommendations more transparent and controllable. It explores how recommendation explanations and user controls can make short-video recommendations more transparent and controllable.
@@ -88,8 +88,6 @@ The table summarises the main development changes, why they were made and how th
 
 ## AI Assistance
 
-I used ChatGPT to assist with React and TypeScript development, troubleshooting and project documentation. For example, I used AI assistance to investigate browser video playback issues while moving from externally hosted videos to local MP4 files.
+I developed the prototype using React and TypeScript, with support from ChatGPT for troubleshooting technical issues. For example, I used ChatGPT to investigate video playback problems when replacing externally hosted videos with local MP4 files.
 
-I reviewed the suggested changes and made adjustments where necessary. I then checked the relevant behaviour in the browser, including local video playback and the prototype's main interactions. ChatGPT also helped me organise the system architecture diagram and storyboards. I reviewed the diagrams and written documentation to ensure they represented the implemented prototype accurately.
-
-AI assistance supported the development and documentation process; I reviewed the final implementation and its behaviour.
+I reviewed the suggestions, made adjustments where necessary, and tested video playback and the main interactions in the browser. I also used AI assistance when preparing the system architecture diagram and storyboards, which I checked and revised to match the implemented prototype.
