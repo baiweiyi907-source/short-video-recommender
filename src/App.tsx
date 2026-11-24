@@ -1,3 +1,4 @@
+
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { VerticalFeed, type VideoItem } from 'react-vertical-feed'
 import {
@@ -16,9 +17,6 @@ type FeedVideo = VideoItem & {
   id: string
   title: string
   category: Category
-  creator: string
-  license: string
-  sourcePage: string
 }
 
 const playback = {
@@ -34,89 +32,57 @@ const catalog: FeedVideo[] = [
   {
     id: 'food-cupcakes',
     src: '/videos/food.mp4',
-    title: 'Freshly Made Cupcakes on Display at Butter Cream Bakery',
+    title: 'Cupcakes and Pastries at a Bakery',
     category: 'Food',
-    creator: 'Sarah Stierch',
-    license: 'CC BY 4.0',
-    sourcePage:
-      'https://commons.wikimedia.org/wiki/File:Butter_Cream_Bakery_%26_Diner_-_February_2024_-_Sarah_Stierch.webm',
     ...playback,
   },
   {
     id: 'nature-waterfall',
     src: '/videos/nature.mp4',
-    title: 'Breathtaking Sunrise Over the Clouds in Mawlangren',
+    title: 'Sunrise Above the Clouds',
     category: 'Nature',
-    creator: 'BLMUtah',
-    license: 'Public domain (US)',
-    sourcePage:
-      'https://commons.wikimedia.org/wiki/File:Day_2-_Spring_footage_of_Professor_Creek_Waterfall_(20088375152).webm',
     ...playback,
   },
   {
     id: 'animals-bird',
     src: '/videos/animals.mp4',
-    title: 'Close Encounter with a Lion at Ishikawa Zoo in Japan',
+    title: 'Lion at a Zoo',
     category: 'Animals',
-    creator: 'Chuck Homler / FocusOnWildlife.Me',
-    license: 'CC BY-SA 4.0',
-    sourcePage:
-      'https://commons.wikimedia.org/wiki/File:Male_Red-Winged_Blackbird_(Agelaius_phoeniceus)_Singing_-_John_Heinz_National_Wildlife_Refuge.webm',
     ...playback,
   },
   {
     id: 'fun-amusement',
     src: '/videos/fun.mp4',
-    title: 'Thrilling Amusement Park Rides at Särkänniemi in Finland',
+    title: 'Amusement Park Rides',
     category: 'Fun',
-    creator: 'Sounds of Changes / Mikael Maffei',
-    license: 'CC BY 3.0',
-    sourcePage:
-      'https://commons.wikimedia.org/wiki/File:S%C3%A4rk%C3%A4nniemi_Amusement_Park.webm',
     ...playback,
   },
   {
     id: 'travel-clouds',
     src: '/videos/travel.mp4',
-    title: 'Exploring the Streets of San Francisco by Cable Car',
+    title: 'Cable Car Tracks Through City Streets',
     category: 'Travel',
-    creator: 'Wann Majaw',
-    license: 'CC BY 4.0',
-    sourcePage:
-      'https://commons.wikimedia.org/wiki/File:Mawlangren_Above_the_Clouds.webm',
     ...playback,
   },
   {
     id: 'sports-basketball',
     src: '/videos/sports.mp4',
-    title: 'Soccer Match Highlights from Incirlik Sports Day',
+    title: 'Football at a Community Sports Event',
     category: 'Sports',
-    creator: 'DavidforDance',
-    license: 'CC BY 4.0',
-    sourcePage:
-      'https://commons.wikimedia.org/wiki/File:Special_Olympics_Basketball_running_2024.webm',
     ...playback,
   },
   {
     id: 'music-lion-dance',
     src: '/videos/music.mp4',
-    title: 'Music and Cultural Celebrations at WikiConvention in Cotonou',
+    title: 'Music and Dancing at a Celebration',
     category: 'Music',
-    creator: 'FeaturingDallas',
-    license: 'CC BY 4.0',
-    sourcePage:
-      'https://commons.wikimedia.org/wiki/File:Lion_Dance_2025.webm',
     ...playback,
   },
   {
     id: 'city-night-market',
     src: '/videos/city.mp4',
-    title: "Panoramic Aerial Views of Pereira's Urban Landscape",
+    title: 'Aerial Views of a City',
     category: 'City',
-    creator: 'Bim24',
-    license: 'CC BY-SA 4.0',
-    sourcePage:
-      'https://commons.wikimedia.org/wiki/File:CARBON_NIGHT_MARKET_(1).webm',
     ...playback,
   },
 ]
