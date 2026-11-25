@@ -1,5 +1,5 @@
 # Personalisation and User Control in Short-Video Recommendation Systems
-README prose word count: 728 words
+README prose word count: 730 words
 ## Project Overview
 
 This project is a short-video recommendation website that explores how recommendation explanations and user controls can make short-video recommendations more transparent and controllable. It uses rule-based scoring to demonstrate how feedback and manual preferences can influence video rankings.
@@ -80,9 +80,9 @@ The table summarises the main development changes, why they were made and how th
 | Development Stage     | Changes and Reasons                                                                                                                 | Verification                                                                  |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | Initial Interface     | Built the short-video feed and organised eight sample videos into eight categories to establish the main user interaction.          | Checked page rendering and video playback in the browser.                     |
-| Feedback and Ranking  | Implemented Like, Not Interested, interest-score updates, recommendation previews and Undo to make the effects of feedback visible (`src/PreferenceControl.tsx` and `src/App.tsx`). | Checked feedback actions, score changes and recommendation previews.          |
+| Feedback and Ranking  | Implemented Like, Not Interested, interest-score updates, recommendation previews and Undo to make the effects of feedback visible (`src/recommendation.ts` and `src/App.tsx`). | Checked feedback actions, score changes and recommendation previews.          |
 | Preference Management | Added eight labelled preference sliders so users can directly control category interests (`src/PreferenceControl.tsx` and `src/App.tsx`).                                           | Checked manual score adjustments and their effect on recommendation rankings. |
-| Data Management       | Added browser localStorage and separate reset and deletion functions to support persistent preferences and user data control (`src/PreferenceControl.tsx` and `src/App.tsx`).       | Checked preference restoration, reset behaviour and data deletion.            |
+| Data Management       | Added browser localStorage and separate reset and deletion functions to support persistent preferences and user data control (`src/App.tsx` and `src/PreferenceControl.tsx`).       | Checked preference restoration, reset behaviour and data deletion.            |
 | Video Sources         | Replaced externally hosted videos with eight local MP4 files to reduce dependence on external video sources.                        | Checked playback of the local video files in the browser.                     |
 | Final Checks          | Reviewed the main prototype features and prepared the project files for submission through GitHub.                                  | Checked the main browser interactions and overall prototype behaviour.        |
 
